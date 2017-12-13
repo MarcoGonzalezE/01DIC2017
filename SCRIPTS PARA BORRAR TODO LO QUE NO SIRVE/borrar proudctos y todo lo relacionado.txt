@@ -1,0 +1,15 @@
+-- PRODUCTOS
+
+SELECT id, warranty, list_price, weight, sequence, color, write_uid, 
+       uom_id, description_purchase, default_code, create_date, create_uid, 
+       sale_ok, purchase_ok, message_last_post, company_id, uom_po_id, 
+       description_sale, description, volume, write_date, active, categ_id, 
+       name, rental, type, tracking, location_id, description_picking, 
+       sale_delay, warehouse_id, produce_delay, track_service, sale_line_warn_msg, 
+       sale_line_warn, invoice_policy, expense_policy, purchase_line_warn_msg, 
+       purchase_method, purchase_line_warn, sat_product_id, no_identity_other, 
+       no_identity_type, import_vat, website_description, rating_last_value, 
+       can_be_expensed
+  FROM public.product_template;
+
+TRUNCATE public.product_template CASCADE;

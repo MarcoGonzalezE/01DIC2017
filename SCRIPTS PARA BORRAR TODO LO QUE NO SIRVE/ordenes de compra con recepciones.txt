@@ -1,0 +1,4 @@
+use SLAvicapp
+select  P.PONbr,por.batnbr from purchord  P
+inner join poreceipt por on por.ponbr = P.ponbr
+where p.status <> 'M' 

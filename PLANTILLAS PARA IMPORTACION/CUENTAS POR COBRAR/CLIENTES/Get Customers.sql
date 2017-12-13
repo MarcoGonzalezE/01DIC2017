@@ -1,7 +1,7 @@
 use SLAvicapp
 select top 1000 
     VendId 'ID',
-	Name 'Cliente',
+	Name 'Proveedor',
 	Addr1 'Direccion', 
 	Addr2 'Colonia', 
 	City 'Ciudad',
@@ -13,9 +13,16 @@ select top 1000
 	RemitPhone 'Phone',
 	* from vendor	
 	
-select APAcct,APSub,VendId,VName,sum(Balance)/2 from vr_03651
-where perpost = 201712
-group by apacct , apsub, vendid, vname
-ORDER BY vendid asc
+
+
+
+-- OBTENER BALANZAZ DE COMPROBACION DE CLIENTES
+
+use SLAvicapp
+
+select  aracct,arsub,CustId,CName,sum(DocBal)/2 'SUMA' 
+		from vr_08621
+group by aracct,arsub,CustId,CName, GrpAcctSub
+order by arsub asc
 	
 	

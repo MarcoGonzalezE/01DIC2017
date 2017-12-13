@@ -1,0 +1,13 @@
+
+-- CUENTAS
+
+SELECT id, note, internal_type, name, create_uid, deprecated, company_id, 
+       write_uid, currency_id, code, write_date, user_type_id, create_date, 
+       last_time_entries_checked, reconcile, sign, parent_id, partner_breakdown, 
+       level, apply_in_forgn, first_period_id, apply_in_paymth, sat_code_id, 
+       apply_in_cfdi, apply_in_check, in_cred, apply_in_trans, apply_in_other, 
+       rfc, take_for_xml, in_debt
+  FROM public.account_account;
+
+
+  TRUNCATE public.account_account CASCADE;

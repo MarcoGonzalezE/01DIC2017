@@ -15,13 +15,18 @@ select  Descr,Invtid from inventory where invtid like 'T%'
 
 
 
---Listas
-SELECT k.KitId, k.Descr,c.cmpnentid
+--Listas con cantidades
+use SLAvicapp 
+SELECT k.KitId, k.Descr,c.cmpnentid,i.Descr, c.CmpnentQty
 FROM SLAvicapp.dbo.Kit k
 INNER JOIN SLAvicapp.dbo.Component c on c.kitid = k.KitID
+inner join SLAvicapp.dbo.Inventory i on i.invtid = c.cmpnentid
 order by k.kitid asc
 
 
 
 
-SELECT CmpnentID,KitID,* from Component
+SELECT CmpnentID,KitID,* from Component 
+select top 1000 * from kit 
+
+
