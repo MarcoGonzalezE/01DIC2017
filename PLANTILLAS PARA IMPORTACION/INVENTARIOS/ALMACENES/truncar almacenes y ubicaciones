@@ -1,0 +1,1 @@
+ truncate table  public.stock_warehouse cascade

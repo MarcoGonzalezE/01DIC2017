@@ -30,3 +30,17 @@ SELECT CmpnentID,KitID,* from Component
 select top 1000 * from kit 
 
 
+
+
+--- INVENTARIO DE DYNAMICS
+
+use SLAvicapp
+select 
+	location.siteid,
+	location.whseloc,
+	location.invtid,
+	inventory.descr,
+	location.QtyOnHand
+	from location location
+inner join inventory inventory on inventory.invtid = location.invtid
+where location.qtyOnHand <> 0
