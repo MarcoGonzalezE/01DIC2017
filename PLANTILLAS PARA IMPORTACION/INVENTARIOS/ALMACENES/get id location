@@ -1,0 +1,10 @@
+
+
+
+
+SELECT id, complete_name,parent_left, parent_right, comment, putaway_strategy_id, 
+       create_date, write_date, write_uid, partner_id, removal_strategy_id, 
+       scrap_location, location_id, company_id, complete_name, usage, 
+       create_uid, barcode, posz, posx, posy, active, name, return_location, 
+       valuation_in_account_id, valuation_out_account_id, change_std_price_account_id
+  FROM public.stock_location where complete_name like '%G01%' order by id asc;
