@@ -1,0 +1,10 @@
+use SLAvicapp
+select 
+location.siteid,
+location.whseloc,
+location.invtid,
+inventory.descr,
+location.QtyOnHand
+from location location
+inner join inventory inventory on inventory.invtid = location.invtid
+where location.qtyOnHand <> 0 and location.siteid = 'CCUARTELES'
